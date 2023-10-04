@@ -1,0 +1,82 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title><%= title %></title>
+</head>
+<body>
+    
+    <!-- <h1><%= title %></h1> -->
+    <section id="Todo-app">
+
+<!-- nav  -->
+        <section id="nav">
+            <h2>TODO APP</h2>
+        </section>
+
+ <!----- INPUT FORM for adding in db -->
+       <form action="/create" method="POST">
+        
+            <section id="desc">
+                <h1>Description</h1>
+                <input type="text" name="desc" placeholder="give task description" required>
+            </section>
+            <section id="category">
+                <h1>Category</h1>
+                <select name="category" id="catgs" required>
+                    <option value="">--Choose option--</option>
+                    <option value="school">School</option>
+                    <option value="home">Office</option>
+                    <option value="office">Home</option>
+                    <option value="hobb">Hobby</option>
+                </select>
+            </section>
+            <section id="date">
+            <h1>Due Date</h1>
+            <input type="date" id="date-due" name='date'   required>
+            </section>
+<!-----------    ADD and DELETE btn    -->
+            <section id="task">
+            <button id="add-task" type="submit">Add task</button>
+            
+            <button id="delete-task" form="delete-list">Delete task</button>
+            
+            </section>
+
+        </form>
+
+<!-------- LIST SHOWN BELOW ----------->
+        <section id="list">
+
+            <!------------ DELETE FORM  & List-------------------------------------->
+                    <form action="/delete" method="POST" id="delete-list">
+                                    <ul>
+                                <!-- for loop for the items to be fill with ejs  -->
+                                    <% for(let i of todo_list){%>
+
+                                            <li>     
+                                                    <div id="<%=i._id%>" class="mycheckbox">
+                                                        <input type="checkbox" id="<%=i._id%>" name="list" value="<%=i._id%>">
+                                                    </div> 
+                                                    <p class="list-desc"><%=i.desc%></p>
+                                                    <p class="list-cat">
+                                                        <span><%=i.category%></span>
+                                                    </p>
+                                                    <p class="list-date">
+                                                        <span class="date-pseudo">&emsp;&emsp;Date&emsp;&emsp;</span>
+                                                        <span class="date-value" style=" text-decoration: overline;margin-left: 10px;"><%=i.date%></span>
+                                                    </p>
+                                            </li>
+                                    <%}%>
+                                
+                                </ul>
+                   </form> 
+
+        </section>
+       
+    
+     </section>
+        <script src="script.js"></script>
+</body>
+</html>

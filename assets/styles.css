@@ -1,0 +1,379 @@
+
+:root{
+
+    /* --bordercolor1:rgb(255, 77, 77);
+    --bordercolor2:rgb(145, 145, 145);
+    --bordercolor3:rgb(196, 86, 247);
+    --bordercolor4:rgb(15, 216, 15);
+    --bordercolor5:rgb(255, 255, 88);
+    --bordercolor6:rgb(253, 24, 215);  */
+
+
+    /* --bg-todoapp-color1:#000000; */
+    --bg-nav-color1:#1e1e55;
+    --bg-nav-color2:#3eeb92;
+    --bg-desc-color1:#ac540c;
+    --bg-desc-color2:#a89762;
+    --bg-cat-color1:#bc3914;
+    --bg-cat-color2:#731289;
+    --bg-date-color1:#a199a1;
+    --bg-date-color2:#893eeb;
+    --bg-task-color1:#3eeb92;
+    --bg-task-color2:#2a5f43;
+ 
+    --bg-ul-color1:#fce8fc;
+    --bg-ul-color2:#893eeb;
+    --bg-list-color1:#152f50;
+    --bg-list-color2:#b48d2b;
+    --bg-color3:#fcbf19;
+
+    --bg-searchinput:rgb(99, 82, 82);
+    --bg-categoryinput:rgb(136, 2, 197);
+    --bg-date-input:rgb(167, 167, 0);
+   
+    --bg-addbutton:rgb(9, 68, 151);
+    --bg-deletebutton:rgb(206, 81, 2);
+
+    --bg-list-desc-button:orange;
+    --bg-list-category-button:rgb(193, 25, 25);
+    --bg-list-date-button:orange;
+   
+   
+     
+
+    --bg-1:#2f1452;
+
+
+}
+
+body{
+    display:flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+html{
+    font-size: 90%;
+    font-family: sans-serif;
+    
+
+
+}
+
+*{
+    box-sizing: border-box;
+    color: aliceblue;
+    border-radius: 4px;
+}
+
+
+#Todo-app{
+  width:70vw;
+  max-width: 700px;
+  
+  margin-top: 15px;
+  border:1px solid var(--bordercolor2);
+  background-color: var(--bg-todoapp-color1);
+  display:flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap:wrap ;
+  
+}
+
+section>h1{
+    margin-left: 10px;
+    font-weight: 200;
+
+    
+}
+
+#Todo-app>form{
+    width:100%;
+    height:auto;
+    margin-bottom: 0;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap:wrap ;
+}
+#nav,#desc,#task,#list{
+    width: 100%;
+    border:1px solid var(--bordercolor6);
+}
+
+#category,#date{
+    width: 50%;
+    height:100px;
+    border:1px solid var(--bordercolor6);
+}
+#nav{
+    height: 50px;
+    background-image:linear-gradient(var( --bg-nav-color1),var( --bg-nav-color2)) ;
+    
+}
+#desc{
+    height:85px;
+    background-image:linear-gradient(135deg,var( --bg-desc-color1),var( --bg-desc-color2)) ;
+}
+
+#nav,#nav>h2{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+#desc>input{
+   
+    width:80%;
+    height:auto;
+    margin-left:10%;
+    background-color: var(--bg-searchinput);
+}
+
+#desc>input::placeholder{
+    color:wheat;
+}
+
+#category{
+    background-image:linear-gradient(var( --bg-cat-color1),var( --bg-cat-color2)) ;
+    position:relative;
+}
+
+#category>select{
+    background-color: var(--bg-categoryinput);
+    position: absolute;
+    left:25px;
+}
+#date{
+    background-image:linear-gradient(var( --bg-date-color1),var( --bg-date-color2)) ;
+    position:relative;
+}
+#date>input{
+    background-color: var(--bg-date-input);  
+    position: absolute;
+    left:25px;
+}
+
+#task{
+    height:60px;
+    background-image:linear-gradient(var( --bg-task-color1),var( --bg-task-color2)) ;
+    display :flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#add-task,#delete-task{
+    height:60%;
+    width:30%;
+
+}
+
+#add-task{
+   
+background-color: var(--bg-addbutton);
+}
+
+#add-task::before {
+    content: ''; /* Clear the default content */
+    background-image: url('./icons/plus-solid-whte.svg');
+    background-repeat: no-repeat;
+    background-size: 15px 15px; /* Set the size of the icon */
+    background-position: top;
+    width: 15px; /* Optional: Set the width to match the background-size */
+    height: 17px; /* Optional: Set the height to match the background-size */
+    display: inline-block; /* Ensure proper sizing */
+    vertical-align: top;
+    color: white;
+    margin-left:-15px;
+    margin-right: 10px; /* Optional: Add spacing between the icon and text */
+    filter: invert(100%); 
+}
+    
+
+#delete-task{
+background-color: var(--bg-deletebutton);
+}
+
+#delete-task::before {
+    content: ''; /* Clear the default content */
+    background-image: url('./icons/trash-can-regular.svg');
+    background-repeat: no-repeat;
+    background-size: 15px 15px; /* Set the size of the icon */
+    background-position: top;
+    width: 15px; /* Optional: Set the width to match the background-size */
+    height: 17px; /* Optional: Set the height to match the background-size */
+    display: inline-block; /* Ensure proper sizing */
+    vertical-align: top;
+    color: white;
+    margin-left:-15px;
+    margin-right: 10px; /* Optional: Add spacing between the icon and text */
+    filter: invert(100%); 
+}
+
+#list{
+    height: auto;
+    padding:0;
+    background-color: #4f2d7b;
+}
+
+#list>form{
+  width:100%;
+  min-height:200px;
+  height: auto;
+  margin-bottom: 0;
+  background-color: #4f2d7b;
+}
+
+#list>form>ul{
+    list-style: none;
+    border:1px solid var(--bordercolor4);
+    padding:0;
+    margin:0;
+    min-height: 100px;
+    background-color: transparent;
+
+}
+#list>form>ul>li{
+
+    border:1px solid var(--bordercolor3);
+    background-image:linear-gradient(90deg,var( --bg-list-color1),var( --bg-list-color2)) ;
+    min-height: 30px ;
+    height:auto;
+   
+    padding:5px 10px;
+    margin:5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+ 
+    
+    
+} 
+
+#list>ul>li>p{
+    margin-top: 0;
+}
+
+
+
+.mycheckbox {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    color: blue;
+    background-color: white; 
+    margin-top: 25px;
+    border:1px solid var(--bordercolor6);
+    position:relative;
+    
+  }
+
+  .mycheckbox>input{
+    height:0;
+    width:0;
+    display: none;
+    position: absolute;
+    top:10px;
+  }
+  .checked{
+    background-image: url(icons/circle-check-regular.svg);
+    background-color: #3eeb92;
+  }
+
+  .list-desc{
+    width:65%;
+    min-height: 20px;
+    color: #fce8fc;
+    height:auto;
+    font-size: large;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+
+    padding:2%;
+    border:1px solid var(--bordercolor6);
+  }
+
+  .list-cat{
+    padding:1%;
+    min-width: 80px;
+    width:20%;
+    border:1px solid var(--bordercolor6);
+    background-color: var(--bg-list-category-button);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .list-cat>span{
+    text-align: center;
+    width:100%;
+    border:1px solid var(--bordercolor6);
+  }
+
+  .list-date{
+    flex-grow: 0.8;
+    width:30%;
+    height: auto;
+    margin-left: 15px;
+    margin-top: -8px;
+    margin-bottom: 10px;
+    border:1px solid var(--bordercolor6);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .list-date>.date-pseudo::before {
+    content: ''; /* Clear the default content */
+    background-image: url('./icons/calendar-week-solid.svg');
+    background-repeat: no-repeat;
+    background-size: 18px 28px; /* Set the size of the icon */
+
+    width: 18px; /* Optional: Set the width to match the background-size */
+    height: 28px; /* Optional: Set the height to match the background-size */
+    display: inline-block; /* Ensure proper sizing */
+    vertical-align: middle;
+    color: white;
+    margin-left:-25px;
+    margin-right: 0px; /* Optional: Add spacing between the icon and text */
+    filter: invert(100%); 
+}
+
+  .list-date>span{
+    font-weight: 600;
+    margin-top: 3px;
+    color: #edc5ba;
+   
+  }
+
+
+  /*------------------------ MEDIA QUERIES------------- */
+
+  @media (max-width: 667px) {
+
+    html{
+        font-size:97%;
+    }
+
+    
+    #Todo-app{
+          width:100vw;
+    }
+
+    #category>select,#date>input{
+
+        left:12px;
+    }
+
+    .mycheckbox {
+        width: 15px;
+        height: 15px;
+    }
+
+
+
+
+  }

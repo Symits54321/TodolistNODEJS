@@ -1,0 +1,177 @@
+
+:root{
+
+    --bordercolor1:rgb(255, 77, 77);
+    --bordercolor2:rgb(145, 145, 145);
+    --bordercolor3:rgb(196, 86, 247);
+    --bordercolor4:rgb(15, 216, 15);
+    --bordercolor5:rgb(255, 255, 88);
+    --bordercolor6:rgb(253, 24, 215); 
+
+
+
+    --bg-searchtheme1:#fce8fc;
+    --bg-searchtheme2:#893eeb;
+    --bg-searchtheme3:#fcbf19;
+    --bg-fav-sticker:red;
+    --bg-backbutton:orange;
+     
+
+    --bg-1:#2f1452;
+
+
+}
+
+body{
+    display:flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#Todo-app{
+  width:70vw;
+  min-height:70vw;
+  margin-top: 15px;
+  border:1px solid var(--bordercolor2);
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap:wrap ;
+  
+}
+
+html{
+    font-size: 70%;
+    font-family: sans-serif;
+    
+
+*{
+    box-sizing: border-box;
+}
+}
+
+section>h1{
+    margin-left: 10px;
+    font-weight: 200;
+
+    
+}
+#nav,#desc,#task,#list{
+    width: 100%;
+    border:1px solid var(--bordercolor6);
+}
+
+#category,#date{
+    width: 49%;
+    height:100px;
+    border:1px solid var(--bordercolor6);
+}
+
+#nav,#desc{
+    height:100px;
+}
+
+#nav,#nav>h2{
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+   
+}
+
+#desc>input{
+   
+    width:80%;
+    height:auto;
+    margin-left:10%;
+}
+
+#category{
+    position:relative;
+}
+
+#category>select{
+    position: absolute;
+    left:25px;
+}
+
+#task{
+    height:100px;
+    display :flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#list{
+    min-height:200px;
+    height: auto;
+}
+
+#list>ul{
+    list-style: none;
+    border:1px solid var(--bordercolor4);
+    padding:0;
+    min-height: 150px;
+
+}
+#list>ul>li{
+
+    border:1px solid var(--bordercolor3);
+    min-height: 50px ;
+    height:auto;
+    padding: 10px;
+    display: flex;
+   
+    flex-wrap: wrap;
+   
+    
+    
+} 
+
+#list>ul>li>p{
+    margin-top: 0;
+}
+
+
+
+.mycheckbox {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    color: blue;
+    background-color: white;
+    margin-left: 0px;
+    margin-top:8px;
+    border:1px solid var(--bordercolor6);
+    
+  }
+  .checked{
+    background-image: url(icons/circle-check-regular.svg);
+  }
+
+  .list-desc{
+    width:65%;
+    min-height: 40px;
+
+    padding:2%;
+    border:1px solid var(--bordercolor6);
+  }
+
+  .list-cat{
+    padding:2%;
+    border:1px solid var(--bordercolor6);
+  }
+
+  .list-cat>span{
+    width:100%;
+    border:1px solid var(--bordercolor6);
+  }
+
+  .list-date{
+    width:30%;
+    height: auto;
+    margin-left: 20px;
+    border:1px solid var(--bordercolor6);
+    display: flex;
+    flex-direction: column;
+  }
